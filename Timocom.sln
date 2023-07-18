@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timocom.Soap.Testing", "Tim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timocom.Soap.Production", "Timocom.Soap.Production\Timocom.Soap.Production.csproj", "{7AA28C0A-CDA4-4608-AA88-E3E1763E14C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timocom.Soap", "Timocom.Soap\Timocom.Soap.csproj", "{B7C4C656-01F7-4CF7-993C-1196EDAE4D1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7AA28C0A-CDA4-4608-AA88-E3E1763E14C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA28C0A-CDA4-4608-AA88-E3E1763E14C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA28C0A-CDA4-4608-AA88-E3E1763E14C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C4C656-01F7-4CF7-993C-1196EDAE4D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C4C656-01F7-4CF7-993C-1196EDAE4D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C4C656-01F7-4CF7-993C-1196EDAE4D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C4C656-01F7-4CF7-993C-1196EDAE4D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
