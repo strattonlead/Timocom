@@ -18,7 +18,9 @@
 	  <PackageProjectUrl>https://github.com/strattonlead/Timocom</PackageProjectUrl>
 	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
 	  <PrivateRepositoryUrl>https://github.com/strattonlead/Timocom.git</PrivateRepositoryUrl>
-	  <!--<PackageIcon>icon.png</PackageIcon>-->
+	  <PackageIcon>icon.png</PackageIcon>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,16 +29,15 @@
 	<PackageReference Include="System.ServiceModel.Http" Version="4.8.*" />
 	<PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.*" />
 	<PackageReference Include="System.ServiceModel.Security" Version="4.8.*" />
+	  <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+	  </PackageReference>
   </ItemGroup>
 
-	<!--<ItemGroup>
-		--><!--
-		Add an icon.png next to the csproj:
-		- Supported format: png, jpg
-		- Recommended dimensions: 128x128
-		- Maximum size: 1MB
-	--><!--
+	<ItemGroup>
 		<None Include="icon.png" Pack="true" PackagePath=""/>
-	</ItemGroup>-->
+		<None Include="README.md" Pack="true" PackagePath=""/>
+	</ItemGroup>
 
 </Project>
