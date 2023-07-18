@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<TargetFramework>net6.0</TargetFramework>
@@ -14,6 +14,10 @@
 	  <NoWarn>$(NoWarn);CS1591</NoWarn>
 	  <PackageTags>Timocom, SOAP</PackageTags>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <Description>Timocom SOAP client for async communication with the testing endpoint.</Description>
+	  <PackageProjectUrl>https://github.com/strattonlead/Timocom</PackageProjectUrl>
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	  <PrivateRepositoryUrl>https://github.com/strattonlead/Timocom.git</PrivateRepositoryUrl>
 	  <!--<PackageIcon>icon.png</PackageIcon>-->
   </PropertyGroup>
 
@@ -27,11 +31,11 @@
 
 	<!--<ItemGroup>
 		--><!--
-        Add an icon.png next to the csproj:
-        - Supported format: png, jpg
-        - Recommended dimensions: 128x128
-        - Maximum size: 1MB
-    --><!--
+		Add an icon.png next to the csproj:
+		- Supported format: png, jpg
+		- Recommended dimensions: 128x128
+		- Maximum size: 1MB
+	--><!--
 		<None Include="icon.png" Pack="true" PackagePath=""/>
 	</ItemGroup>-->
 
