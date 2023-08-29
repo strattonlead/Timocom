@@ -8,11 +8,25 @@ namespace Timocom.Soap
     {
         protected TimocomSoapClientOptions Options;
         public TCCClientPortTypeClient(TimocomSoapClientOptions options) :
-                 base(GetDefaultBinding(), new System.ServiceModel.EndpointAddress(options.RemoteAddress))
+                 base(_getDefaultBinding(), new System.ServiceModel.EndpointAddress(options.RemoteAddress))
         {
             Options = options;
             this.Endpoint.Name = EndpointConfiguration.TCCClientSoap12.ToString();
             _configureEndpoint(this.Endpoint, this.ClientCredentials);
+        }
+
+        private static System.ServiceModel.Channels.Binding _getDefaultBinding()
+        {
+            System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
+            System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
+            textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
+            result.Elements.Add(textBindingElement);
+            System.ServiceModel.Channels.HttpTransportBindingElement httpBindingElement = new System.ServiceModel.Channels.HttpsTransportBindingElement();
+            httpBindingElement.AllowCookies = true;
+            httpBindingElement.MaxBufferSize = int.MaxValue;
+            httpBindingElement.MaxReceivedMessageSize = int.MaxValue;
+            result.Elements.Add(httpBindingElement);
+            return result;
         }
 
         private void _configureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials)
