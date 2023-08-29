@@ -47,7 +47,7 @@ namespace Timocom.Soap.DependencyInjection
             }
         }
 
-        private const string TESTING_ENDPOINT = "https://ws-test.timocom.com/tcconnect/ws_v2/soap1_2/";
+        private const string TESTING_ENDPOINT = "http://ws-test.timocom.com/tcconnect/ws_v2/soap1_2/";
         private const string PRODUCTION_ENDPOINT = "https://webservice.timocom.com/tcconnect/ws_v2/soap1_2/";
         protected static System.ServiceModel.EndpointAddress GetTestingEndpointAddress()
            => new System.ServiceModel.EndpointAddress("https://ws-test.timocom.com/tcconnect/ws_v2/soap1_2/");
